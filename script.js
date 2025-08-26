@@ -1,5 +1,6 @@
 const colorDisplay = document.getElementById("colorDisplay");
 const colorBtn = document.getElementById("colorBtn");
+const copyBtn = document.getElementById("copy");
 
 const getRandomHexColor = () => {
     let symbols = "0123456789ABCDEF";
@@ -11,5 +12,9 @@ const getRandomHexColor = () => {
 };
 
 colorBtn.addEventListener("click", () => {
-    colorDisplay.textContent = document.body.style.background = colorBtn.style.color = getRandomHexColor();
+    colorDisplay.textContent = document.body.style.background = colorBtn.style.color = copyBtn.style.color = getRandomHexColor();
+});
+
+copyBtn.addEventListener("click", () => {
+    navigator.clipboard.writeText(colorDisplay.textContent);
 });
