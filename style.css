@@ -28,6 +28,10 @@ body {
     gap: 10px;
 }
 
+button {
+    cursor: pointer;
+}
+
 #colorBtn {
     height: 60px;
     width: 180px;
@@ -43,6 +47,7 @@ body {
 #copy {
     height: 60px;
     width: 60px;
+    background: white;
     border-radius: 100px;
     border: 0;
     box-shadow: 0 0 5px hsla(0, 0%, 0%, 0.5);
