@@ -62,11 +62,26 @@ button {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 8px;
-    width: fit-content;
+    gap: 10px;
+    text-decoration: none;
+    padding: 12px 16px;
+    backdrop-filter: blur(12px);
+    background: hsla(0, 0%, 100%, 0.3);
+    border-radius: 1000px;
+    transition: all ease 0.3s;
+}
+
+#github:hover {
+    transform: translateY(-2px);
+    background-color: hsla(0, 0%, 100%, 0.5);
 }
 
 #github svg {
-    width: 32px;
-    height: 32px;
+    width: 24px;
+    height: 24px;
+    transition: all ease 0.3s;
+}
+
+#github:hover svg {
+    transform: rotate(360deg);
 }
