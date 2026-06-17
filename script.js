@@ -21,6 +21,7 @@ colorBtn.addEventListener("click", () => {
 
 copyBtn.addEventListener("click", () => {
     navigator.clipboard.writeText(colorDisplay.textContent);
+    showToast("Copied to Clipboard");
 });
 
 function activateButton(button, otherButton) {
@@ -41,3 +42,16 @@ function addButtonListeners(button, otherButton) {
 
 addButtonListeners(colorBtn, copyBtn);
 addButtonListeners(copyBtn, colorBtn);
+
+function showToast(message) {
+    const toast = document.createElement("div");
+    toast.classList.add("toast");
+    toast.textContent = message;
+    document.body.appendChild(toast);
+
+    setTimeout(() => toast.classList.add("show"), 10);
+    setTimeout(() => {
+        toast.classList.remove("show");
+        setTimeout(() => toast.remove(), 300);
+    }, 2000);
+}
