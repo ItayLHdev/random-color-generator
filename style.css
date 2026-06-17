@@ -83,6 +83,14 @@ button {
     font-size: 18px;
 }
 
+.button-active {
+    border-radius: 999px !important;
+    transform: scale(0.9);
+}
+.button-other-active {
+    border-radius: 999px !important;
+}
+
 #github {
     font-family: sans-serif;
     color: black;
