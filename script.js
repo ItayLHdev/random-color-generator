@@ -23,21 +23,21 @@ copyBtn.addEventListener("click", () => {
     navigator.clipboard.writeText(colorDisplay.textContent);
 });
 
-function activateButton (button, otherButton) {
+function activateButton(button, otherButton) {
     button.classList.add("button-active");
     otherButton.classList.add("button-other-active");
 }
 
-function resetButton (button, otherButton) {
+function resetButton(button, otherButton) {
     button.classList.remove("button-active");
     otherButton.classList.remove("button-other-active");
 }
 
-function addButtonListeners (button, otherButton) {
+function addButtonListeners(button, otherButton) {
     button.addEventListener("mousedown", () => activateButton(button, otherButton));
     button.addEventListener("mouseup", () => resetButton(button, otherButton));
-    button.addEventListener("mouseleave", () => resetButton(button, otherButton))
+    button.addEventListener("mouseleave", () => resetButton(button, otherButton));
 }
 
-addButtonListeners(colorBtn, copyBtn)
-addButtonListeners(copyBtn, colorBtn)
+addButtonListeners(colorBtn, copyBtn);
+addButtonListeners(copyBtn, colorBtn);

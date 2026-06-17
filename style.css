@@ -119,3 +119,24 @@ button {
 #github:hover svg {
     transform: rotate(360deg);
 }
+
+.toast {
+    position: fixed;
+    background: white;
+    color: black;
+    border-radius: var(--pill);
+    transform: translateY(50%);
+    bottom: 30px;
+    padding: 12px 24px;
+    font-family: sans-serif;
+    font-size: 16px;
+    opacity: 0;
+    z-index: 999;
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform  0.3s ease;
+}
+
+.toast.show {
+    transform: translateY(-50%);
+    opacity: 1;
+}
